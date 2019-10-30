@@ -5,6 +5,9 @@
   <title></title>
 </head>
 <body>
+  <video autoplay loop id="myVideo">
+  <source src="shrek.mp4" type="video/mp4">
+</video>
 <script>
   (function ($, window, undefined) {
   $.fn.marqueeify = function (options) {
@@ -74,14 +77,14 @@
 $(document).ready( function() {
 
   $('.marquee1').marqueeify({
-    speed: 500,
+    speed: 300,
     bumpEdge: function () {
       var newColor = "hsl(" + Math.floor(Math.random()*360) + ", 100%, 50%)";
       $('.marquee .logo').css('fill', newColor);
     }
   });
     $('.marquee').marqueeify({
-    speed: 300,
+    speed: 100,
     bumpEdge: function () {
       var newColor = "hsl(" + Math.floor(Math.random()*360) + ", 100%, 50%)";
       $('.marquee .logo').css('fill', newColor);
@@ -93,7 +96,7 @@ $(document).ready( function() {
 
 
   <div class="marquee">
-  <H1>Abnar Antonio Martinez is Extremley Gay</H1>
+  <H1>Abnar Antonio Martinez is Gay</H1>
 </div>
 <div class="marquee1">
   <H1>Super gay</H1>
@@ -101,7 +104,7 @@ $(document).ready( function() {
 <style>
   html,
 body {
-  background: #c4c1ff;
+  background: green;
   height: 100%;
   margin: 0;
   min-height: 100%;
@@ -129,6 +132,13 @@ svg {
 }
 .logo {
   fill: #fff;
+}
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
 }
 </style>
 </body>
