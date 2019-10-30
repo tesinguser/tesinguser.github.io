@@ -5,7 +5,7 @@
   <title></title>
 </head>
 <body>
-  <video autoplay loop id="myVideo">
+  <video autoplay loop class = "myVideo" id="myVideo">
   <source src="/shrek.mp4" type="video/mp4">
 </video>
     <video autoplay loop id="myVideo1">
@@ -80,6 +80,13 @@
 $(document).ready( function() {
 
   $('.marquee1').marqueeify({
+    speed: 300,
+    bumpEdge: function () {
+      var newColor = "hsl(" + Math.floor(Math.random()*360) + ", 100%, 50%)";
+      $('.marquee .logo').css('fill', newColor);
+    }
+  });
+    $('.myVideo').marqueeify({
     speed: 300,
     bumpEdge: function () {
       var newColor = "hsl(" + Math.floor(Math.random()*360) + ", 100%, 50%)";
