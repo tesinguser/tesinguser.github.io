@@ -5,12 +5,7 @@
   <title></title>
 </head>
 <body>
-  <video autoplay loop class = "myVideo" id="myVideo">
-  <source src="/shrek.mp4" type="video/mp4">
-</video>
-    <video autoplay loop id="myVideo1">
-  <source src="/shrek.mp4" type="video/mp4">
-</video>
+
 <script>
   (function ($, window, undefined) {
   $.fn.marqueeify = function (options) {
@@ -86,13 +81,6 @@ $(document).ready( function() {
       $('.marquee .logo').css('fill', newColor);
     }
   });
-    $('.myVideo').marqueeify({
-    speed: 300,
-    bumpEdge: function () {
-      var newColor = "hsl(" + Math.floor(Math.random()*360) + ", 100%, 50%)";
-      $('.marquee .logo').css('fill', newColor);
-    }
-  });
     $('.marquee').marqueeify({
     speed: 100,
     bumpEdge: function () {
@@ -147,8 +135,8 @@ svg {
   position: fixed;
   right: 0;
   bottom: 0;
-  min-height: 1vh;
-  min-width: 1vh;
+  min-width: 90%; 
+  min-height: 100%;
 }
 </style>
 </body>
