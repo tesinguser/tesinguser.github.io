@@ -73,11 +73,14 @@
 })(jQuery, window);
 
 $(document).ready( function() {
-  $('.marquee1').marqueeify).css("transform", "scale(" + scale + ")");({
+  $('.marquee1').marqueeify({
     speed: 300,
     bumpEdge: function () {
       var newColor = "hsl(" + Math.floor(Math.random()*360) + ", 100%, 50%)";
       $('.marquee .logo').css('fill', newColor);
+      $('marquee .logo)'.click(function(){
+      $('marquee .logo).hide( "scale", {percent: 200, direction: 'horizontal'}, 2000 );
+            });
     }
   });
     $('.marquee').marqueeify({
